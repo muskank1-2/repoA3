@@ -9,9 +9,10 @@ The merge conflict can only be solved mnaually using a text editor .
 The steps I have taken to resolve merge conflict is shown below:-
 
 1. Logged into my github accound and using the *new*  option in the top righ side of the github dekstop Created a git Repo named "repoa3"
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/a54d9bd2-2acb-4d83-b87c-c46330b7016a)
 
-![alt text](image.png)
-   
+
+
 2. Now using windows powershell terminal I have cloned the git repo to the system using :
 
 ```bash 
@@ -23,13 +24,15 @@ After this, I created a file "project.txt" and added it and made the first commi
   git add project.txt
   git commit -m "first commit ft project.txt"
 ```
+
 3. I pushed the file and changes to github using:
 in the main branch
 ``` bash
 git push origin main
 ```
 The results of the step is shown in the ss here:
-![alt text](image-1.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/4db8c9da-69d8-4e54-8c30-e7bfdacf1f04)
+
 
 4. Now in order to work with different branches I created a new branch names "b1" and "b2" using 
 ```bash
@@ -40,7 +43,7 @@ Now these branches have to be pushed to github thus after creating the branches 
 git push origin <branch>
 ```
 The results are shown here:
-![alt text](image-2.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/42e83549-27e7-4cde-a9f7-18dc56906636)
 
 
 5. I checked out to branch "b1" in order to make changes and work with this branch using 
@@ -53,20 +56,24 @@ git checkout <branch>
 These changes have to be pushed to Github and thus pushed the changes to github using the same command used before.
 
 The results are shown as :
-![alt text](image-3.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/d770cfeb-7fe9-4580-adcf-2032db089d51)
+
 
 7. After this I did the same with branch b2 and made different changes in same line as *"project.txt in branch b2"* and pushed it to Github
 The results are shown here:
-![alt text](image-4.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/46cd33ee-0df8-472a-bcdc-5347992ba941)
+
 
 the github deskstop, with *repoa3* looks like this:
-![alt text](image-6.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/780d6f19-8500-4290-8dd5-7d93f75f0ece)
+
 
 8. Now as changes have been made in the file from both the branches i.e. b1 by me and b2 by my teammate *(as per the scenario)*
 I will checkout to main branch and merge **b1** in the **main** branch first and then push the changes to Github
 And then we will merge **b2** !
 At this step merge conflict occurs as shown :
-![alt text](image-5.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/ccac85f2-2c71-4326-9d88-1c8594f7c1f7)
+
 
 
 9. Now in order to let git accept the changes we will have to tell git which changes to accept among branch b1 and b2 and thus this will be done manually.
@@ -76,16 +83,19 @@ we can also use echo command to resolve the conflict for small changes:
 
 10. After making the changes we added the file and commit the changes in "project.txt"
 
-![alt text](image-7.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/edc6a558-cae2-4b91-88ed-6db665e75a10)
+
 
 11. After all this we will check for the merge conflict status omce we have pushed the changes to github using 
 ```bash 
 git status
 ```
-![alt text](image-8.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/2734b37f-9748-4041-8ad8-48b6b5fea6db)
 
-12. further we will Review the commit *log* to ensure the merge commit is present and check its message to confirm it indicates the conflict was resolved:  
-![alt text](image-9.png)
+
+12. further we will Review the commit *log* to ensure the merge commit is present and check its message to confirm it indicates the conflict was resolved:
+ ![image](https://github.com/muskank1-2/repoA3/assets/169113658/23bd4155-aadc-4aa0-9f4f-7e4ef11a04ba)
+
 
 Thus here the Merge conflcit has been resolved.
 
@@ -105,7 +115,8 @@ git log
 This command shows you the commit history, including the most recent commit at the top. Verify that your commit message appears in the log to confirm that the changes were committed as intended.
 
 the results are shown as :
-![alt text](image-10.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/45402888-6fda-43da-aa33-7574bd64bddc)
+
 
 # scenario 3 : Include Additional Commit in the Previous Commit Message
 Task : Task: You have just made a commit but realize you forgot to include a file and make a small typo correction. Instead of creating a new commit, you can amend the last commit to include these changes without altering the commit message. Also verify the amended commit by checking the commit
@@ -117,13 +128,15 @@ git command -amend -m "message"
 ```
 
 #### The results looks like this before amend 
-![alt text](image-11.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/a472b68f-3cea-4ee4-99e9-e2db7b760e25)
 
-![alt text](image-12.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/fe4ccfcf-8147-41a2-96b7-8e4b99cf867a)
+
 
 As I have made the commit after adding the 4 files , *"updated content"* , I am changing it to "Added four files for scenario2 and amending for scenario3" using amend as shown :
 
-![alt text](image-13.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/fe089c3f-fc75-48e8-b6a0-7bf19eb57846)
+
 
 # scenario 4 : Stash Command
 At times when we dont want to commit our changes but save it, we can use stash command so that we can save your uncommitted changes temporarily and can switch tasks without committing those changes.
@@ -134,19 +147,19 @@ git stash
 ```
 checked the status of the file 
 The results are shwon as :
-![alt text](image-14.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/e1d26cef-3967-4bc8-b65c-5ff46bec0c04)
 
 ## other Stash commands 
   > git stash save "name" = temporarily stashes changes you have made to your working copy so you can work on something else,and then come back and re-apply them later on.
   > git stash apply = reverts the stash command
-   ![alt text](image-15.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/c4eb9afa-175d-44f2-8e65-fc361a0d8b0c)
 
    > git stash list = it will pull up a list of your repository stashes.
-   ![alt text](image-16.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/5e5a88b6-9a63-44c3-9541-38454b4402c9)
 
    > git stash pop = it removes or throws away the latest or the topmost stash.
    Here in the image I have used *git pop* and *git list* to show the changes made after delelting stash using pop, by the end we dont have any stash.
-   ![alt text](image-17.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/6b1dcde9-cee3-431b-a599-20d282bb3cbd)
 
 # scenario 5 : Use of .gitignore
 Task: You have files in your project that should not be tracked by Git, such as log files or build artifacts.
@@ -181,10 +194,12 @@ git commit -m "Excluding log files"
 5. Now I will check the status and it will show the untracked file ,*ignore.log* 
 
 The results are shown here :
-![alt text](image-30.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/7e0d9536-43ab-4df3-a90e-b4fc45229cb6)
 
-This occurred because the pattern specified with *.gitignore* doesn't match the pattern of that file and thus we can edit/add the patterns of the file which we dont want to track using any texteditor in the *.gitignore* file 
-![alt text](image-31.png)
+
+This occurred because the pattern specified with *.gitignore* doesn't match the pattern of that file and thus we can edit/add the patterns of the file which we dont want to track using any texteditor in the *.gitignore* file .
+
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/cb15f18c-0d2c-495f-940d-450ffb96d683)
 
 After updating the pattern I will stag and commit the
 changes made using 
@@ -197,7 +212,7 @@ changes made using
 
 
 Results :
-![alt text](image-32.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/1d00b6ba-7654-4439-9556-24b3a4a1e4f0)
 
 Thus this shows the succes of .gitignore 
 
@@ -232,19 +247,20 @@ git revert <commit-hash>
  git log 
  ```
  The results are as shown :
- ![alt text](image-19.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/3c01c345-5402-475f-9efc-dd9f88e4e072)
 
  The hash is copied from :
- ![alt text](image-20.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/8aa7a25b-f129-4937-ba1e-bc09ec5f7619)
 
 After this the *revert* command is run and the commit is reverted
 
-![alt text](image-21.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/6b2c9809-e6f2-4461-accc-3ea0f403cd69)
+
 
 I have done this and the results are as shwon :
 
 
-![alt text](image-22.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/11191377-1254-440a-9951-2326cea90499)
 
 # Scenario 7 : Pull Request 
 Task : You have made changes on a feature branch and want to merge them into the main branch via a pull request.
@@ -276,17 +292,20 @@ git commit -m "Added feature content"
 git push origin feature
 ```
 
-![alt text](image-23.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/8c9a1b01-4896-41a9-a0e6-eac96967156e)
+
 
 5. This step actually involves creating the pull request and for which I created a pull request to merge the Feature branch into the **main** branch 
 
-![alt text](image-24.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/ee3f3762-e585-4146-8e81-0bde691e68aa)
+
 
 For this I navigated to my github repository *"repoA3"*
 and will click the *create pull request* prompt for the recently pushed branch *feature*.
 After selecting the feature branch and the source and main branch as the base branch , I will pull the request.
 
-![alt text](image-27.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/c25508d1-bb9d-45a0-8565-a9aaddcf3fc2)
+
 
 6. There is a description box where we have to add the description of our branch and the changes . So I wrote the description according to the features my file contains.
 ![alt text](image-26.png)
@@ -294,9 +313,10 @@ After selecting the feature branch and the source and main branch as the base br
 7. After this confirm the merge pull request and in this way a pull request is efficiently created.
 
 The results are shown as :
-![alt text](image-28.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/de632cbc-6749-458b-9c76-92372f9a8367)
 
-![alt text](image-29.png)
+![image](https://github.com/muskank1-2/repoA3/assets/169113658/5ecd4a19-1467-4322-89bf-d3da0d969c12)
+
 
 # ASSIGNMENT QUESTIONS 
 ### Why do we create branches in a repository and why do we create pull requests instead of merging directly?

@@ -381,3 +381,12 @@ or safer alternative:
 git push --force-with-lease origin <branch-name>
 ```
 All these steps can be used to sync a branch with origin.
+
+
+# Extra Learnings 
+1. #### git reflog - this helps to display a history of all changes to the current files branches HEAD refrence and this helps to recover from mistakes and understand the repository' state , while git log is used to display the commit history of the current branch and shows a list of commits, along with details like commit hash, author, date and commit message.
+2.  ### git cat <file name> - this helps in checking the contents of a particular file we have created
+3.  ### git cherry-pick - this helps to make changes introduced by an existing commit onto the current branch< this is helpful when we want to aplly specific chages from one branch to another without merging the entire branch.
+
+   git cherry-pick <hash of the commit>
+   
